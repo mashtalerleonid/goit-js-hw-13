@@ -20,7 +20,7 @@ img {
   margin-bottom: 10px;
   justify-content: center;
   align-items: center;
-  background-color: cornflowerblue;
+  background-color: rgb(46, 108, 223);
   font-size: 25px;
   z-index: 5;
 }
@@ -41,16 +41,36 @@ img {
   border-bottom-right-radius: 5px;
 }
 
+.load-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  border: none;
+  background-color: rgb(46, 108, 223);
+  color: white;
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
 .gallery {
   margin-top: 100px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   width: 90%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 300px;
   grid-gap: 15px;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .photo-card-link {
