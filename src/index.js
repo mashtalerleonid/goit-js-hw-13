@@ -1,7 +1,19 @@
 import './css/style.css';
+import 'simplelightbox/dist/simple-lightbox.css';
+
 import imageCardTpl from './templates/image-card.hbs';
 import ImagesApiService from './js/image-service';
+
 import Notiflix from 'notiflix';
+import SimpleLightbox from 'simplelightbox';
+
+Notiflix.Notify.init({
+  distance: '30px',
+  fontSize: '20px',
+  width: '400px',
+});
+
+const lightbox = new SimpleLightbox('.gallery a', { showCounter: false });
 
 const imagesApiService = new ImagesApiService();
 
@@ -44,13 +56,14 @@ async function fetchImages() {
     const totalHits = fetchedImages.totalHits;
     const currentPage = imagesApiService.options.params.page - 1;
     const perPage = imagesApiService.options.params.per_page;
-    // console.log(fetchedImages);
 
     if (currentPage === 1) {
       makeNotificationSuccess(`Hooray! We found ${totalHits} images.`);
     }
 
     appendMarkup(fetchedImages);
+
+    lightbox.refresh();
 
     checkImagesCount(totalHits, currentPage, perPage);
 

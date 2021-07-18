@@ -23,9 +23,13 @@ img {
   background-color: rgb(46, 108, 223);
   font-size: 25px;
   z-index: 5;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .search-form > input {
+  height: 50px;
+  width: 300px;
   padding: 5px;
   border: none;
   line-height: 1.5;
@@ -34,11 +38,14 @@ img {
 }
 
 .search-form > button {
-  padding: 5px;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   line-height: 1.5;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 
 .load-more {
@@ -117,4 +124,8 @@ img {
 
 .info-item > span {
   margin-top: 5px;
+}
+
+.icon {
+  fill: blue;
 }
