@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Pagination</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,6 +12,11 @@
     />
   </head>
   <body>
+    <div class="links">
+      <a href="index-load-more.html">Load more</a>
+      <!-- <a href="index-infinity-scroll.html">Infinity scroll</a> -->
+      <a href="index-pagination.html">Pagination</a>
+    </div>
     <form class="search-form" id="search-form">
       <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
       <button type="submit">
@@ -23,8 +28,8 @@
       <!-- Карточки изображений -->
     </div>
 
-    <button type="button" class="load-more is-hidden">Load more</button>
+    <div id="tui-pagination-container" class="tui-pagination is-hidden"></div>
 
-    <script src="./index.js"></script>
+    <script src="./pagination.js"></script>
   </body>
 </html>

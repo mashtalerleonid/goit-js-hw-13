@@ -8,6 +8,21 @@ img {
   height: auto;
 }
 
+.links {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.links > a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+
 .search-form {
   position: fixed;
   left: 50%;
@@ -63,7 +78,7 @@ img {
   color: white;
 }
 
-.load-more.is-hidden {
+.is-hidden {
   display: none;
 }
 

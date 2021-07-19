@@ -26,8 +26,6 @@ export default class ImagesApiService {
       throw new Error();
     }
 
-    this.incrementPage();
-
     return response.data;
   }
 
@@ -45,5 +43,13 @@ export default class ImagesApiService {
 
   set query(newQuery) {
     this.options.params.q = newQuery;
+  }
+
+  get page() {
+    return this.options.params.page;
+  }
+
+  set page(newPage) {
+    this.options.params.page = newPage;
   }
 }
