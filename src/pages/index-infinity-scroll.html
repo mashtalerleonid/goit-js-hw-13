@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagination</title>
+    <title>Infinity scroll</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -13,14 +13,14 @@
   </head>
   <body>
     <div class="links">
-      <a href="index.html">Load more</a>
-      <!-- <a href="index-infinity-scroll.html">Infinity scroll</a> -->
-      <a href="index-pagination.html">Pagination</a>
+      <a href="../index.html">Load more</a>
+      <a href="./index-infinity-scroll.html">Infinity scroll</a>
+      <a href="./index-pagination.html">Pagination</a>
     </div>
     <form class="search-form" id="search-form">
       <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
       <button type="submit">
-        <img src="./images/search-solid.svg" width="30" alt="" />
+        <img src="../images/search-solid.svg" width="30" alt="" />
       </button>
     </form>
 
@@ -28,8 +28,8 @@
       <!-- Карточки изображений -->
     </div>
 
-    <div id="tui-pagination-container" class="tui-pagination is-hidden"></div>
+    <div id="sentinel"></div>
 
-    <script src="./pagination.js"></script>
+    <script src="../infinity-scroll.js"></script>
   </body>
 </html>

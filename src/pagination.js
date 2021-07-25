@@ -29,7 +29,7 @@ const refs = {
 const optionsPagination = {
   totalItems: 0,
   itemsPerPage: imagesApiService.options.params.per_page,
-  visiblePages: 5,
+  visiblePages: 10,
   page: 1,
 };
 

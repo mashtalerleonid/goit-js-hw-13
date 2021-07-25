@@ -54,7 +54,7 @@ async function fetchImages() {
     hideLoading();
 
     const totalHits = fetchedImages.totalHits;
-    const currentPage = imagesApiService.options.params.page;
+    const currentPage = imagesApiService.page;
     const perPage = imagesApiService.options.params.per_page;
 
     if (currentPage === 1) {
@@ -114,7 +114,7 @@ function smoothScroll() {
     .querySelector('.gallery')
     .firstElementChild.getBoundingClientRect();
 
-  if (imagesApiService.options.params.page !== 2) {
+  if (imagesApiService.options.params.page !== 1) {
     window.scrollBy({
       top: cardHeight * 2,
       behavior: 'smooth',
