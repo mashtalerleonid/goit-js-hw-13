@@ -17,10 +17,12 @@ export default class ImagesApiService {
         safesearch: 'true',
       },
     };
+    this.totalHits = 0;
   }
 
   async fetchImages() {
     const response = await axios.request(this.options);
+    this.totalHits = response.data.totalHits;
 
     if (response.data.hits.length === 0) {
       throw new Error();

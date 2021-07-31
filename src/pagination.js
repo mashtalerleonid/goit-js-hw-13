@@ -51,8 +51,9 @@ async function onSearch(e) {
 
   clearArticlesContainer();
 
-  const totalImages = await fetchImages();
-  pagination.reset(totalImages);
+  await renderFetchedImages();
+
+  pagination.reset(imagesApiService.totalHits);
 
   refs.container.classList.remove('is-hidden');
 }
@@ -60,10 +61,10 @@ async function onSearch(e) {
 pagination.on('afterMove', event => {
   const currentPage = event.page;
   imagesApiService.page = currentPage;
-  fetchImages();
+  renderFetchedImages();
 });
 
-async function fetchImages() {
+async function renderFetchedImages() {
   try {
     showLoading();
 
@@ -71,7 +72,7 @@ async function fetchImages() {
 
     hideLoading();
 
-    const totalHits = fetchedImages.totalHits;
+    const totalHits = imagesApiService.totalHits;
     const currentPage = imagesApiService.page;
 
     if (currentPage === 1) {
@@ -83,8 +84,6 @@ async function fetchImages() {
     appendMarkup(fetchedImages);
 
     lightbox.refresh();
-
-    return totalHits;
   } catch (error) {
     console.log(error);
 
