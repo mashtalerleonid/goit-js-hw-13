@@ -1,6 +1,6 @@
-import './css/style.css';
 import 'simplelightbox/dist/simple-lightbox.css';
 import 'tui-pagination/dist/tui-pagination.min.css';
+import './css/style.css';
 
 import imageCardTpl from './templates/image-card.hbs';
 import ImagesApiService from './js/image-service';
